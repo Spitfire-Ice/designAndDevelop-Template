@@ -76,7 +76,7 @@ header {
  .header--content-button {
   width: 180px;
   height: 54px;
-  background-color: rgb(16, 201, 195);
+  background-color: rgba(16, 201, 195, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,6 +91,80 @@ header {
  .header--content-button:hover {
   transform: scale(1.05);
   transition: 0.3s;
+ }
+}
+
+// menu button
+.menu__mobile-button {
+ display: inline-block;
+ cursor: pointer;
+ z-index: 5;
+ margin-right: 50px;
+ position: relative;
+ top: -5px;
+}
+
+.bar1, .bar2, .bar3 {
+ width: 35px;
+ height: 5px;
+ background-color: rgba(25,25,25,0.8);
+ margin: 6px 0;
+ transition: 0.4s;
+}
+
+.buttonChange .bar1 {
+ -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+ transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.buttonChange .bar2 {
+ opacity: 0;
+}
+
+.buttonChange .bar3 {
+ -webkit-transform: rotate(45deg) translate(-8px, -8px);
+ transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.menuAction {
+ left: 0!important;
+ right: 0!important;
+ transition: 1s;
+}
+
+@media screen and (min-width:851px) {
+ .menu__mobile-button {
+  display: none;
+ }
+}
+@media screen and (max-width:850px) {
+ li {
+  margin: 20px 0!important;
+  a {
+   font-size: 36px;
+   color: white;
+  }
+ }
+ .menu {
+  position: fixed;
+  //display: none;
+  background-color: rgba(0,0,0,0.7);
+  left: 100%;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: 1s;
+ }
+ .header--navigation .menu {
+  margin-right: 0;
+  flex-direction: column;
+ }
+ .header--navigation h1 {
+  margin-left: 50px;
  }
 }
 
