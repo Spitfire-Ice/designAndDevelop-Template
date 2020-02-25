@@ -1,0 +1,90 @@
+.skills {
+ width: 100%;
+ min-height: 570px;
+ background: rgba(248,249,249,1);
+
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ grid-template-rows: 1fr;
+}
+.skills--content {
+ width: 100%;
+ min-height: 570px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ .skills--count {
+  max-width: 500px;
+  width: 100%;
+  margin: 10px;
+
+  h3 {
+   font-family: $montserrat;
+   font-size: 30px;
+   font-weight: 600;
+   color: rgba(23, 23, 23, 1);
+  }
+
+  p {
+   font-size: 12px;
+   font-family: $montserrat;
+   color: rgba(0, 0, 0, 1);
+   text-transform: uppercase;
+   line-height: 2.5;
+   font-weight: 600;
+  }
+  figure {
+   position: relative;
+   overflow: hidden;
+   svg:first-child {
+    position: relative;
+    z-index: 2;
+   }
+   svg:last-child {
+   //removed - look bottom
+   }
+  }
+ }
+}
+.skills--bg {
+ background: url("../img/skill-bg-001.jpg") no-repeat center;
+ background-size: cover;
+ width: 100%;
+ min-height: 570px;
+
+}
+
+// skills lines
+
+.skills--content .skills--count .count-item:nth-child(1) figure svg:last-child {
+ position: absolute;
+ top: 9.5px;
+ left: -25%;
+ z-index: 3;
+}
+.skills--content .skills--count .count-item:nth-child(2) figure svg:last-child {
+ position: absolute;
+ top: 9.5px;
+ left: -10%;
+ z-index: 3;
+}
+.skills--content .skills--count .count-item:nth-child(3) figure svg:last-child {
+ position: absolute;
+ top: 9.5px;
+ left: -35%;
+ z-index: 3;
+}
+.skills--content .skills--count .count-item:nth-child(4) figure svg:last-child {
+ position: absolute;
+ top: 9.5px;
+ left: -25%;
+ z-index: 3;
+}
+@media screen and (max-width:850px) {
+ .skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 570px);
+ }
+}
+
