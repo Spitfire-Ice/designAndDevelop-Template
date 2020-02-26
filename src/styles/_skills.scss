@@ -2,7 +2,7 @@
  width: 100%;
  min-height: 570px;
  background: rgba(248,249,249,1);
-
+ overflow: hidden;
  display: grid;
  grid-template-columns: repeat(2, 1fr);
  grid-template-rows: 1fr;
@@ -60,7 +60,7 @@
  background-size: cover;
  width: 100%;
  min-height: 570px;
-
+ overflow: hidden;
 }
 
 // skills lines

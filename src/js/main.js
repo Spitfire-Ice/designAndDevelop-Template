@@ -16,14 +16,36 @@ window.menuToggleAction=menuToggleAction;
 
 const showMoreWorks = () => {
   let foo = document.getElementById('gallery-button');
-  if (foo.textContent === "load more work") {
-    document.getElementById('gallery').style.height='1300px';
-    document.getElementById('gallery').style.transition='1s';
-    foo.textContent = "load less work";
+  if (window.innerWidth >= 750) {
+    if (foo.textContent === "load more work") {
+      document.getElementById('gallery').style.height = '1200px';
+      document.getElementById('gallery').style.transition = '1s';
+      foo.textContent = "load less work";
+    } else {
+      document.getElementById('gallery').style.height = '600px';
+      document.getElementById('gallery').style.transition = '1s';
+      foo.textContent = "load more work";
+    }
+  } else if (750 <= window.innerWidth >= 510) {
+    if (foo.textContent === "load more work") {
+      document.getElementById('gallery').style.height = '2400px';
+      document.getElementById('gallery').style.transition = '1s';
+      foo.textContent = "load less work";
+    } else {
+      document.getElementById('gallery').style.height = '600px';
+      document.getElementById('gallery').style.transition = '1s';
+      foo.textContent = "load more work";
+    }
   } else {
-    document.getElementById('gallery').style.height='600px';
-    document.getElementById('gallery').style.transition='1s';
-    foo.textContent = "load more work";
+    if (foo.textContent === "load more work") {
+      document.getElementById('gallery').style.height = '4800px';
+      document.getElementById('gallery').style.transition = '1s';
+      foo.textContent = "load less work";
+    } else {
+      document.getElementById('gallery').style.height = '600px';
+      document.getElementById('gallery').style.transition = '1s';
+      foo.textContent = "load more work";
+    }
   }
 };
 window.showMoreWorks=showMoreWorks;
