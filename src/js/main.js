@@ -14,3 +14,17 @@ const menuToggleAction = ()=> {
 };
 window.menuToggleAction=menuToggleAction;
 
+const showMoreWorks = () => {
+  let foo = document.getElementById('gallery-button');
+  if (foo.textContent === "load more work") {
+    document.getElementById('gallery').style.height='1300px';
+    document.getElementById('gallery').style.transition='1s';
+    foo.textContent = "load less work";
+  } else {
+    document.getElementById('gallery').style.height='600px';
+    document.getElementById('gallery').style.transition='1s';
+    foo.textContent = "load more work";
+  }
+};
+window.showMoreWorks=showMoreWorks;
+

@@ -17,12 +17,16 @@
   max-width: 500px;
   width: 100%;
   margin: 10px;
-
+  .count-item {
+   margin: 25px 0;
+  }
   h3 {
    font-family: $montserrat;
    font-size: 30px;
    font-weight: 600;
    color: rgba(23, 23, 23, 1);
+   margin-bottom: 32px;
+   padding-top: 18px;
   }
 
   p {
@@ -32,6 +36,11 @@
    text-transform: uppercase;
    line-height: 2.5;
    font-weight: 600;
+   margin-left: 7px;
+   letter-spacing:1.2px;
+   span {
+    margin-left: 10px;
+   }
   }
   figure {
    position: relative;
@@ -87,4 +96,8 @@
   grid-template-rows: repeat(2, 570px);
  }
 }
-
+@media screen and (max-width:530px) {
+ .skills--content .skills--count figure {
+  transform: scaleX(0.7) translate(-20%,0);
+ }
+}
