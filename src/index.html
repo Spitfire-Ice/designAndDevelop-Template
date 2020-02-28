@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="This is an example of a meta description. This will often show up in search
   results.">
     <title>Site</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 </head>
 <body id="home">
 
-<header>
+<header class="header">
   <nav class="header--navigation">
     <h1><a href="#home"><img src="./img/logo.png" alt="logo" width="31" height="25"></a></h1>
     <ul class="menu" id="navigation" onclick="menuToggleAction()">
       <li><a href="#">home</a></li>
       <li><a href="#">about</a></li>
-      <li><a href="#">work</a></li>
+      <li><a href="#work">work</a></li>
       <li><a href="#">process</a></li>
       <li><a href="#">services</a></li>
       <li><a href="#">testimonials</a></li>
       <li><a href="#">contact</a></li>
     </ul>
-    <div class="menu__mobile-button" id="mobileButton" onclick="menuToggleAction()">
+    <div class="mobile-button" id="mobileButton" onclick="menuToggleAction()">
       <div class="bar1"></div>
       <div class="bar2"></div>
       <div class="bar3"></div>
@@ -54,57 +56,20 @@
         <div class="count-item">
           <p>ui/ux design <span>75</span>%</p>
           <figure>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="500px" height="3px">
-              <path fill-rule="evenodd"  fill="rgb(216, 216, 216)"
-                    d="M-0.000,-0.000 L500.000,-0.000 L500.000,3.000 L-0.000,3.000 L-0.000,-0.000 Z"/>
-            </svg>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="500px" height="3px">
-              <path fill-rule="evenodd"  fill="rgb(16, 201, 195)"
-                    d="M-0.000,-0.000 L500.000,-0.000 L500.000,3.000 L-0.000,3.000 L-0.000,-0.000 Z"/>
-            </svg>
+            <progress max="100" value="75"></progress>
           </figure>
         </div>
         <div class="count-item">
           <p>web development <span>90</span>%</p>
           <figure>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="500px" height="3px">
-              <path fill-rule="evenodd"  fill="rgb(216, 216, 216)"
-                    d="M-0.000,-0.000 L500.000,-0.000 L500.000,3.000 L-0.000,3.000 L-0.000,-0.000 Z"/>
-            </svg>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="500px" height="3px">
-              <path fill-rule="evenodd"  fill="rgb(16, 201, 195)"
-                    d="M-0.000,-0.000 L500.000,-0.000 L500.000,3.000 L-0.000,3.000 L-0.000,-0.000 Z"/>
-            </svg>
+            <figure>
+              <progress max="100" value="90"></progress>
+            </figure>
           </figure>
         </div><div class="count-item">
         <p>marketing <span>65</span>%</p>
         <figure>
-          <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              width="500px" height="3px">
-            <path fill-rule="evenodd"  fill="rgb(216, 216, 216)"
-                  d="M-0.000,-0.000 L500.000,-0.000 L500.000,3.000 L-0.000,3.000 L-0.000,-0.000 Z"/>
-          </svg>
-          <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              width="500px" height="3px">
-            <path fill-rule="evenodd"  fill="rgb(16, 201, 195)"
-                  d="M-0.000,-0.000 L500.000,-0.000 L500.000,3.000 L-0.000,3.000 L-0.000,-0.000 Z"/>
-          </svg>
+          <progress max="100" value="65"></progress>
         </figure>
       </div>
       </div>
@@ -170,8 +135,8 @@
       <figcaption>Was years it seasons was there form he in in them together over that,
         third sixth gathered female creeping bearing behold years.</figcaption>
       <div class="video-wrapper">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-        </iframe>
+<!--        <iframe title="Video For This Site" width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY">-->
+<!--        </iframe>-->
       </div>
     </figure>
 
@@ -229,12 +194,58 @@
     </div>
   </section>
   <section class="testomanials" id="testomanials">
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h4>“ Outstanding job and exceeded all expectations. It was a pleasure
+              to work with them on a sizable first project and am looking
+              forward to start the next one asap.”</h4>
+            <p>Michael Hopkins</p>
+          </div>
+        </div>
+        <div class="swiper-slide"><div class="slide-content">
+          <h4>“ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis
+            commodi culpa dolor eligendi eum excepturi exercitationem incidunt non, ratione
+            sunt vel veritatis.”</h4>
+          <p>Michael Hopkins</p>
+        </div></div>
+        <div class="swiper-slide"><div class="slide-content">
+          <h4>“ Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Alias cum distinctio ea eius iste iusto mollitia quos sint ullam
+            veniam. Assumenda laboriosam nesciunt nisi optio perspiciatis quasi, qui quisquam tempore!”</h4>
+          <p>Michael Hopkins</p>
+        </div></div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </section>
+  <section class="clients" id="clients">
+    <div class="clients--client"><img src="./img/client-1.png" alt="client" width="89" height="65"></div>
+    <div class="clients--client"><img src="./img/client-2.png" alt="client" width="98" height="58"></div>
+    <div class="clients--client"><img src="./img/client-3.png" alt="client" width="127" height="72"></div>
+    <div class="clients--client"><img src="./img/client-4.png" alt="client" width="96" height="72"></div>
+    <div class="clients--client"><img src="./img/client-5.png" alt="client" width="89" height="65"></div>
+  </section>
+  <section class="contacts" id="contacts">
 
   </section>
-
 </main>
 <footer>
 
 </footer>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 </body>
 </html>
+

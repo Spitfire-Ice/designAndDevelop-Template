@@ -3,8 +3,9 @@ import './menu';
 import '../../node_modules/smooth-scroll/dist/smooth-scroll.polyfills'
 import './plugins';
 
+"use strict";
 
-const menuToggleAction = ()=> {
+const menuToggleAction = () => {
   if (window.innerWidth <= 850) {
     const addButtonChange = document.getElementById('mobileButton');
     addButtonChange.classList.toggle('buttonChange');
@@ -12,7 +13,7 @@ const menuToggleAction = ()=> {
     menuActionSlide.classList.toggle("menuAction");
   }
 };
-window.menuToggleAction=menuToggleAction;
+window.menuToggleAction = menuToggleAction;
 
 const showMoreWorks = () => {
   let foo = document.getElementById('gallery-button');
@@ -49,4 +50,33 @@ const showMoreWorks = () => {
   }
 };
 window.showMoreWorks=showMoreWorks;
+
+var mySwiper = new Swiper ('.swiper-container', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  //Autoplay
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+
+  // Navigation arrows
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  // },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+window.mySwiper=mySwiper;
 
