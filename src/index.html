@@ -17,13 +17,13 @@
   <nav class="header--navigation">
     <h1><a href="#home"><img src="./img/logo.png" alt="logo" width="31" height="25"></a></h1>
     <ul class="menu" id="navigation" onclick="menuToggleAction()">
-      <li><a href="#">home</a></li>
-      <li><a href="#">about</a></li>
-      <li><a href="#work">work</a></li>
-      <li><a href="#">process</a></li>
-      <li><a href="#">services</a></li>
-      <li><a href="#">testimonials</a></li>
-      <li><a href="#">contact</a></li>
+      <li><a data-scroll href="#home">home</a></li>
+      <li><a data-scroll href="#about">about</a></li>
+      <li><a data-scroll href="#work">work</a></li>
+      <li><a data-scroll href="#process">process</a></li>
+      <li><a data-scroll href="#services">services</a></li>
+      <li><a data-scroll href="#testomanials">testimonials</a></li>
+      <li><a data-scroll href="#contacts">contact</a></li>
     </ul>
     <div class="mobile-button" id="mobileButton" onclick="menuToggleAction()">
       <div class="bar1"></div>
@@ -36,7 +36,7 @@
     <p>We are a new design studio based in USA. We have over
       20 years of combined experience, and know a thing or two
       about designing websites and mobile apps.</p>
-    <div class="header--content-button">contact us</div>
+    <div  class="header--content-button"><a data-scroll href="#contacts">contact us</a></div>
   </div>
 </header>
 <main>
@@ -239,7 +239,26 @@
     <div class="clients--client"><img src="./img/client-5.png" alt="client" width="89" height="65"></div>
   </section>
   <section class="contacts" id="contacts">
-
+    <h3>Need a Project?</h3>
+    <p>Let us know what you're looking for in an agency. We'll take a look and see
+      if this could be the start of something beautiful.</p>
+    <form action="#">
+      <div class="form-row">
+        <label>
+          <input type="text" name="name" placeholder="Your Name">
+        </label>
+        <label>
+          <input type="text" name="e-mail" placeholder="Your Email">
+        </label>
+      </div>
+      <label>
+        <input type="text" name="title" placeholder="Your Title">
+      </label>
+      <label>
+        <textarea name="notes" placeholder="Your message"></textarea>
+      </label>
+      <input type="submit" value="send message">
+    </form>
   </section>
 </main>
 <footer>

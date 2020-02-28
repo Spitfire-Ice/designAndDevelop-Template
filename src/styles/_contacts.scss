@@ -1,0 +1,160 @@
+.contacts {
+ min-height: 750px;
+ width: 100%;
+ background-color: rgba(245,245,245,1);
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: center;
+ h3 {
+  padding-top: 70px;
+  font-size: 30px;
+  font-family: $montserrat;
+  line-height: 84px;
+  font-weight: 600;
+  color: rgba(29,29,29,1);
+
+ }
+ p {
+  max-width: 535px;
+  font-family: $nunito;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(120,120,120,1);
+  margin-top: 5px;
+  margin-bottom: 30px;
+ }
+}
+form {
+ max-width: 670px;
+ margin: 0 10px;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ flex-wrap: wrap;
+ label {
+  width: 100%;
+ }
+ .form-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  label {
+   width: 320px;
+
+  }
+ }
+ input[name='name'] {
+  width: 320px;
+  height: 48px;
+  font-size: 16px;
+  font-family: $nunito;
+  color: rgba(120,120,120,1);
+  text-indent: 20px;
+  &::placeholder {
+   font-size: 16px;
+   font-family: $nunito;
+   color: rgba(120,120,120,1);
+   text-indent: 20px;
+  }
+ }
+ input[name='e-mail'] {
+  width: 320px;
+  height: 48px;
+  font-size: 16px;
+  font-family: $nunito;
+  color: rgba(120,120,120,1);
+  text-indent: 20px;
+  &::placeholder {
+   font-size: 16px;
+   font-family: $nunito;
+   color: rgba(120,120,120,1);
+   text-indent: 20px;
+  }
+ }
+ input[name='title'] {
+  max-width: 670px;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  font-family: $nunito;
+  color: rgba(120,120,120,1);
+  text-indent: 20px;
+  margin: 25px 0;
+  &::placeholder {
+   font-size: 16px;
+   font-family: $nunito;
+   color: rgba(120,120,120,1);
+   text-indent: 20px;
+  }
+ }
+ textarea {
+  max-width: 670px;
+  width: 100%;
+  height: 160px;
+  font-size: 16px;
+  font-family: $nunito;
+  color: rgba(120,120,120,1);
+  text-indent: 20px;
+  padding-top: 10px;
+  &::placeholder {
+   font-size: 16px;
+   font-family: $nunito;
+   color: rgba(120,120,120,1);
+   text-indent: 20px;
+  }
+ }
+ input[type='submit'] {
+  width: 180px;
+  height: 55px;
+  margin-top: 25px;
+  background-color: $subColor;
+  color: rgba(255,255,255,1);
+  letter-spacing:1.2px;
+  border:none;
+  background-image:none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-family: $montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+ }
+}
+@media screen and (max-width:660px) {
+ form {
+  flex-direction: column;
+  align-items: center;
+ }
+ .form-row {
+  width: 320px!important;
+  input[name='e-mail'] {
+   margin-top: 30px!important;
+  }
+ }
+ label {
+  width: 320px!important;
+ }
+ input[name='title'] {
+  width: 320px!important;
+ }
+ textarea {
+  width: 320px!important;
+ }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,9 +1,12 @@
 import '../styles/main.scss';
 import './menu';
-import '../../node_modules/smooth-scroll/dist/smooth-scroll.polyfills'
+import SmoothScroll from '../../node_modules/smooth-scroll/dist/smooth-scroll.polyfills'
 import './plugins';
 
 "use strict";
+
+const scroll = new SmoothScroll('a[href*="#"]');
+window.scroll=scroll;
 
 const menuToggleAction = () => {
   if (window.innerWidth <= 850) {
