@@ -147,7 +147,7 @@ header {
  }
 }
 @media screen and (max-width:850px) {
- li {
+ .header--navigation .menu li {
   margin: 20px 0!important;
   a {
    font-size: 36px;
